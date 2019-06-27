@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+    font-family: 'Pragati Narrow', sans-serif;
+}
+
+ul a {
+    text-decoration: none;
+    color:lightskyblue;
+}
+
+
+/* 
+Nav Bar Flex */
+
+.flexNav {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    height: 100px;
+    /* background: rgb(2,0,36);
+    background: linear-gradient(149deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(255,0,142,0.3456307870370371) 73%); */
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: white;
+}
+
+.flexNav li {
+    flex: 1;
+    align-items: flex-end;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px black;
+}
+
+#logo {
+    flex: 5;
+    text-align: left;
+    font-size: 2em;
+    color: gray;
+    text-shadow: 1px 1px 1px black;
+}
+
+.navicon {
+    display: none;
+}
+
+/* Footer Nav Bar flex */
+
+.footerNav {
+    display: flex;
+    flex: row;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+    position: relative;
+    top: 100px;
+}
+
+.footerNav li {
+    flex: 1;  
+    max-width: 100px;
+}
+
+
+
+/* Main portfolio section */
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    min-height: 70vh;
+}
+
+.projects {
+    display: flex;
+    flex: 1 1 400px;
+    text-align: center;
+    min-height: 300px;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+
+/* Portfolio Articles  */
+
+span h1 {
+    padding: 20px 10px 30px 10px;
+    font-size: 1.5em;
+}
+
+span p {
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1.5em;
+}
+
+.article {
+    display: inline-block;
+    padding: 20px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+    /* text-shadow: 1px 1px 1px black; */
+    transition: 0.5s;
+}
+
+.article-up {
+    display: block;
+    height: 100%;
+    position: relative;
+    top: 0%;
+    transition: 0.5s;
+}
+
+.article:hover .article-up {
+    top: -100%;
+}
+
+.article:hover {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )
+
+}
+
+.box1 {
+    background:url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2176,w_3000,x_0,y_1817/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/SchirfPhoto_BlueSky_Winter_052_edit_B_m0pszz.jpg);
+    background-size: cover;
+    order: 1;
+}
+
+.box2 {
+    background: url(https://images.huffingtonpost.com/2014-10-30-IMG_2610-thumb.jpg);
+    background-size: cover;
+    order: 1;
+    
+}
+
+.box3 {
+    background: url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_4577,w_5998,x_1421,y_751/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/P-20161129-00644_HiRes_JPEG_24bit_RGB_bkzss1.jpg);
+    background-size: cover;
+    order: 2;
+}
+
+.box4 {
+    background: url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2048,w_1382,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/32790447028_ef087a941e_k_jymosb.jpg);
+    background-size: cover;
+    order: 2;
+}
+
+.box5 {
+    background: url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_494,w_700,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/ale_800_6__dc1no5.jpg);
+    background-size: cover;
+    order: 3;
+}
+
+
+.box6 {
+    background: url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3648,w_5472,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/IMG_9417_z4r5ll.jpg);
+    background-size: cover;
+    order: 1;
+}
+
+
+
+/* Change navigation */
+
+@media only screen and (max-width: 860px) {
+    .navlink {
+        display: none;
+    }
+    
+    .navicon {
+        display: block;
+        flex: 1;
+    }
+
+    #logo {
+        flex: 3;
+    }
+
+    .navicon i {
+        font-size: 1.5em;
+        color:lightskyblue;
+        text-align: right;
+    }
+
+    .navicon i:hover {
+        cursor: pointer;
+    }
+}
